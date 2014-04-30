@@ -5,6 +5,10 @@ Do not try this at home.
 
 for example of usage read the tests or the sources.
 
+## Motivations
+
+every times someone executes `global.app = app` to read some kind of configuration a fairy *dies*!
+
 ## License
 
     DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
