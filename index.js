@@ -43,3 +43,28 @@ module.exports.save = function save (name) {
   if (!! files[name])
     fs.writeFileSync(files[name], JSON.stringify(module.exports[name]));
 }
+
+var _kv = module.exports._kv =  {};
+/**
+ * get/set a `value` using `key`
+ *
+ * @param {String} key
+ * @param {Object} value
+ * @returns {Object}
+ */
+module.exports.set = function getset (key, value) {
+  console.assert('string' === typeof key, 'Key should be a string');
+
+  return value ? _kv[key] = value : _kv[key];
+}
+/**
+ * unset a `key` returning it's `value`
+ *
+ * @param {String} key
+ * @returns {Object}
+ */
+module.exports.unset = function ungetset (key) {
+  var val = _kv[key];
+  delete _kv[key];
+  return val;
+}
