@@ -1,6 +1,6 @@
 {
   "name": "abuse-cfg",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "abuse node.js module cache to provide a simple app-level config persistance layer. You should not use it.",
   "main": "index.js",
   "scripts": {
